@@ -7,13 +7,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Returns the card value */
+int card_value(char card_name[]);
+
 int main() {
 
-    int val = 0;
+    int val;
 
     char card_name[3];
     puts("Enter the card name: ");
     scanf("%2s", card_name);
+    val = card_value(card_name);
+    printf("The card value is %i\n", val);
+    return 0;
+}
+
+int card_value(char card_name[]) {
+
+    int val = 0;
+
     if (card_name[0] == 'K') {
         val = 10;
     } else if (card_name[0] == 'Q') {
@@ -25,6 +37,6 @@ int main() {
     } else {
         val = atoi(card_name);
     }
-    printf("The card value is %i\n", val);
-    return 0;
+
+    return val;
 }
