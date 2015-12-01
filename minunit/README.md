@@ -5,3 +5,10 @@ Testing C with Minunit
 
   [minunit]: http://www.jera.com/techinfo/jtns/jtn002.html
 
+Usage
+-----
+
+```bash
+cd minunit # if necessary
+make && ./bin/count_cards_test
+```
