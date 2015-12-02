@@ -12,19 +12,14 @@ int card_value(char card_name[]);
 
 int card_value(char card_name[]) {
 
-    int val = 0;
-
-    if (card_name[0] == 'K') {
-        val = 10;
-    } else if (card_name[0] == 'Q') {
-        val = 10;
-    } else if (card_name[0] == 'J') {
-        val = 10;
-    } else if (card_name[0] == 'A') {
-        val = 11;
-    } else {
-        val = atoi(card_name);
+    switch(card_name[0]) {
+    case 'K':
+    case 'Q':
+    case 'J':
+      return 10;
+    case 'A':
+      return 11;
+    default:
+      return atoi(card_name);
     }
-
-    return val;
 }
